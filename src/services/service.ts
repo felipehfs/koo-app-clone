@@ -9,6 +9,7 @@ export function makeServer({ environment = "test" } = {}) {
     },
     models: {
       post: Model,
+      trending: Model,
     },
     logging: true,
     factories: {
@@ -19,13 +20,19 @@ export function makeServer({ environment = "test" } = {}) {
         avatar: () => faker.image.avatar(),
         content: () => faker.lorem.paragraph(),
       }),
+      trending: Factory.extend({
+        id: () => faker.datatype.uuid(),
+        name: () => faker.lorem.word(5),
+      }),
     },
     seeds(server) {
       server.createList("post", 35);
+      server.createList("trending", 5);
     },
     routes() {
       this.namespace = "api";
       this.get("/posts");
+      this.get("/trendings");
       this.namespace = "";
       this.passthrough();
     },

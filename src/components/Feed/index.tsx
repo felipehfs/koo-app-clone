@@ -9,6 +9,7 @@ import {
   Navigation,
   Button,
   Content,
+  AsideContent,
 } from "./styles";
 import koo from "../../assets/koo.svg";
 import { BiHome } from "react-icons/bi";
@@ -17,6 +18,7 @@ import { Tab } from "../Tab";
 import { Card } from "../Card";
 import { useEffect, useState } from "react";
 import { Post } from "../../models/post";
+import { Trending } from "../Trending";
 
 export function Feed() {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -44,7 +46,7 @@ export function Feed() {
               Idioma
             </MenuItem>
           </Menu>
-          <Button>+ Post</Button>
+          <Button>+Post</Button>
         </Navigation>
       </SideNav>
       <Timeline>
@@ -58,7 +60,11 @@ export function Feed() {
           <div></div>
         </Tab>
       </Timeline>
-      <Aside></Aside>
+      <Aside>
+        <AsideContent>
+          <Trending />
+        </AsideContent>
+      </Aside>
     </Container>
   );
 }

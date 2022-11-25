@@ -75,3 +75,9 @@ export const Content = styled.div`
     display: none;
   }
 `;
+
+export const AsideContent = styled.div`
+  margin-top: 24px;
+  padding-inline: 16px;
+  position: fixed;
+`;
