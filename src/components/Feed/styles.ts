@@ -2,7 +2,10 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 407px 620px 420px;
+  grid-template-columns: minmax(auto, 407px) minmax(auto, 620px) minmax(
+      auto,
+      420px
+    );
   justify-content: center;
   min-height: 100vh;
 `;
