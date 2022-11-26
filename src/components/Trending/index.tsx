@@ -16,7 +16,7 @@ export function Trending() {
     fetch("/api/trendings")
       .then((resp) => resp.json())
       .then((data) => setTrendings(data.trendings));
-  });
+  }, []);
   return (
     <Container>
       <Header>

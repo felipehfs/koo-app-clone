@@ -26,7 +26,7 @@ export function Feed() {
     fetch("/api/posts")
       .then((resp) => resp.json())
       .then((data) => setPosts(data.posts));
-  });
+  }, []);
   return (
     <Container>
       <SideNav>

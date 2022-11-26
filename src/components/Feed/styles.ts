@@ -8,16 +8,30 @@ export const Container = styled.div`
     );
   justify-content: center;
   min-height: 100vh;
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const SideNav = styled.nav`
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
 export const Timeline = styled.div`
   background-color: #f8f7f3;
   padding: 0 24px 24px;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 0 24px;
+  }
 `;
-export const Aside = styled.aside``;
+export const Aside = styled.aside`
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+`;
 export const Logo = styled.img`
   margin-top: 24px;
   width: 48px;

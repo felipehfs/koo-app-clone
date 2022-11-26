@@ -43,11 +43,11 @@ export function Card({ data }: CardProps) {
       <Footer>
         <IconButton>
           <BiLike />
-          <span>12.3K</span>
+          <span>{data.likes}</span>
         </IconButton>
         <IconButton>
           <BsChatSquare />
-          <span>2.3k</span>
+          <span>{data.total_comments}</span>
         </IconButton>
         <BsWhatsapp />
         <BsShare />

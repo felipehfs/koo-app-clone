@@ -19,6 +19,8 @@ export function makeServer({ environment = "test" } = {}) {
         username: () => faker.internet.userName(),
         avatar: () => faker.image.avatar(),
         content: () => faker.lorem.paragraph(),
+        likes: () => faker.random.numeric(3),
+        totalComments: () => faker.random.numeric(2),
       }),
       trending: Factory.extend({
         id: () => faker.datatype.uuid(),

@@ -10,7 +10,7 @@ export const Title = styled.span`
 
 export const Card = styled.div`
   padding: 10px 16px;
-  width: 350px;
+  width: 250px;
   border: 1px solid #e8e8e3;
   background-color: #f8f7f3;
   display: flex;
@@ -20,6 +20,9 @@ export const Card = styled.div`
 
   & + & {
     margin-top: 8px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 100%;
   }
 `;
 export const CardTitle = styled.span`
