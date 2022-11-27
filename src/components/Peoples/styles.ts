@@ -1,4 +1,14 @@
+import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const Card = styled.div`
   padding: 8px;
@@ -20,6 +30,11 @@ export const Container = styled.div`
   border-radius: 16px;
   padding-block: 8px;
   border: 1px solid #e8e8e3;
+
+  :where(:empty) {
+    display: none;
+  }
+  animation: ${fadeIn} 1s ease-in-out;
 `;
 export const Profile = styled.div`
   & :where(small, strong) {

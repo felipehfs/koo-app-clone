@@ -26,7 +26,7 @@ export const TabButton = styled.button<TabButtonProps>`
   color: #888;
   font-weight: bold;
   position: relative;
-
+  cursor: pointer;
   ${({ active }) =>
     active &&
     css`

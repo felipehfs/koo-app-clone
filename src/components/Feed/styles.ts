@@ -1,4 +1,14 @@
+import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   display: grid;
@@ -88,6 +98,7 @@ export const Content = styled.div`
   &:empty {
     display: none;
   }
+  animation: ${fadeIn} ease-in-out 1s;
 `;
 
 export const AsideContent = styled.div`

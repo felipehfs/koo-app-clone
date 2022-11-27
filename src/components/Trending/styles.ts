@@ -1,4 +1,14 @@
+import { keyframes } from "@emotion/react";
 import styled from "@emotion/styled";
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div``;
 export const Header = styled.header`
@@ -17,7 +27,7 @@ export const Card = styled.div`
   justify-content: space-between;
   align-items: center;
   border-radius: 16px;
-
+  animation: ${fadeIn} 1s ease-in-out;
   & + & {
     margin-top: 8px;
   }
