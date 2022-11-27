@@ -10,6 +10,7 @@ export function makeServer({ environment = "test" } = {}) {
     models: {
       post: Model,
       trending: Model,
+      user: Model,
     },
     logging: true,
     factories: {
@@ -26,15 +27,23 @@ export function makeServer({ environment = "test" } = {}) {
         id: () => faker.datatype.uuid(),
         name: () => faker.lorem.word(5),
       }),
+      user: Factory.extend({
+        id: () => faker.datatype.uuid(),
+        name: () => faker.name.fullName(),
+        username: () => faker.internet.userName(),
+        avatar: () => faker.image.avatar(),
+      }),
     },
     seeds(server) {
-      server.createList("post", 35);
+      server.createList("post", 55);
       server.createList("trending", 5);
+      server.createList("user", 20);
     },
     routes() {
       this.namespace = "api";
       this.get("/posts");
       this.get("/trendings");
+      this.get("/users");
       this.namespace = "";
       this.passthrough();
     },

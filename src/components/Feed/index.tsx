@@ -19,6 +19,7 @@ import { Card } from "../Card";
 import { useEffect, useState } from "react";
 import { Post } from "../../models/post";
 import { Trending } from "../Trending";
+import { Peoples } from "../Peoples";
 
 export function Feed() {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -56,7 +57,7 @@ export function Feed() {
               <Card key={post.id} data={post} />
             ))}
           </Content>
-          <div></div>
+          <Peoples />
           <div></div>
         </Tab>
       </Timeline>
