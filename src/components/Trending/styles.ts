@@ -49,3 +49,8 @@ export const RoundedButton = styled.button`
     height: 26px;
   }
 `;
+
+export const CardLeft = styled.div``;
+export const Avatars = styled.div`
+  display: flex;
+`;

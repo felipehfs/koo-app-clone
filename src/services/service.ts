@@ -26,6 +26,12 @@ export function makeServer({ environment = "test" } = {}) {
       trending: Factory.extend({
         id: () => faker.datatype.uuid(),
         name: () => faker.lorem.word(5),
+        users: () => [
+          faker.image.avatar(),
+          faker.image.avatar(),
+          faker.image.avatar(),
+          faker.image.avatar(),
+        ],
       }),
       user: Factory.extend({
         id: () => faker.datatype.uuid(),
